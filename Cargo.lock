@@ -46,6 +46,7 @@ name = "guessing_game"
 version = "0.1.0"
 dependencies = [
  "colored",
+ "names",
  "rand",
 ]
 
@@ -69,6 +70,15 @@ name = "libc"
 version = "0.2.126"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "349d5a591cd28b49e1d1037471617a32ddcda5731b99419008085f72d5a53836"
+
+[[package]]
+name = "names"
+version = "0.13.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e7d66043b25d4a6cccb23619d10c19c25304b355a7dccd4a8e11423dd2382146"
+dependencies = [
+ "rand",
+]
 
 [[package]]
 name = "ppv-lite86"
