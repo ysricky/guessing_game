@@ -1,4 +1,5 @@
-<center>### "Guess The Number" Simple CLI Game
+<center>
+### "Guess The Number" Simple CLI Game
 #### Written in Rust-lang 🦀
 ##### From "The Rust Programming Language" book, chapter 2
 
@@ -6,4 +7,5 @@
 - Add player name ✅
 - Add score ✅
 
-# R U S T A C E A N</center>
+# R U S T A C E A N
+</center>
