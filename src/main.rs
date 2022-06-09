@@ -7,6 +7,8 @@ use std::io;
 fn main() {
     println!("Guess the number!");
 
+    let mut score = 100;
+
     let secret_number = rand::thread_rng().gen_range(1..101);
 
     let mut player_name = Generator::default();
@@ -14,7 +16,7 @@ fn main() {
     let player_name = player_name.next().unwrap();
 
     loop {
-        println!("________________________");
+        println!("__________________________________");
         println!("Hello {}, please input your guess.", player_name.yellow());
 
         let mut guess = String::new();
@@ -34,9 +36,16 @@ fn main() {
             Ordering::Less => println!("{}", "Too small!".red()),
             Ordering::Greater => println!("{}", "Too big!".red()),
             Ordering::Equal => {
-                println!("{}, {}!", "You win".green(), player_name.yellow());
+                println!(
+                    "{}, {}! Score: {}",
+                    "You win".green(),
+                    player_name.yellow(),
+                    score.to_string().cyan()
+                );
                 break;
             }
         }
+
+        score = score - 10;
     }
 }
